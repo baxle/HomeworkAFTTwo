@@ -42,8 +42,7 @@ public class ParametrizedTest {
         driverName = System.getProperty("driver").toLowerCase();
         System.setProperty("webdriver.gecko.driver", "drv/newgeckodriver.exe");
         System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
-        chromeDriver = new ChromeDriver(); // драйвер по умолчанию
-
+        
 
         if (driverName.equals("chrome")) {
             chromeDriver = new ChromeDriver();

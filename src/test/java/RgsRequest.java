@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
 import static junit.framework.TestCase.assertEquals;
 
 public class RgsRequest {
@@ -79,16 +81,19 @@ public class RgsRequest {
 
     public void fillLastName(String lastName) {
         lastNameElement.clear();
+        driver.manage().timeouts().implicitlyWait((long) 0.2, TimeUnit.SECONDS);
         lastNameElement.sendKeys(lastName);
     }
 
     public void fillFirstName(String firstName) {
         firstNameElement.clear();
+        driver.manage().timeouts().implicitlyWait((long) 0.2, TimeUnit.SECONDS);
         firstNameElement.sendKeys(firstName);
     }
 
     public void fillMiddleName(String middleName) {
         middleNameElement.clear();
+        driver.manage().timeouts().implicitlyWait((long) 0.2, TimeUnit.SECONDS);
         middleNameElement.sendKeys(middleName);
     }
 
@@ -98,24 +103,28 @@ public class RgsRequest {
 
     public void fillEmail(String email) {
         emailElement.clear();
+        driver.manage().timeouts().implicitlyWait((long) 0.2, TimeUnit.SECONDS);
         emailElement.sendKeys(email);
     }
 
     public void fillPhone(String phone) {
         do {
             phoneElement.clear();
+            driver.manage().timeouts().implicitlyWait((long) 0.2, TimeUnit.SECONDS);
             phoneElement.sendKeys(phone);
         } while (!(phoneElement.getAttribute("value")).equals("+7 (800) 555-35-35"));
     }
 
     public void fillComment(String comment) {
         commentElement.clear();
+        driver.manage().timeouts().implicitlyWait((long) 0.2, TimeUnit.SECONDS);
         commentElement.sendKeys(comment);
     }
 
     public void fillDate(String date) {
         do {
             dateElement.clear();
+            driver.manage().timeouts().implicitlyWait((long) 0.2, TimeUnit.SECONDS);
             dateElement.sendKeys(date);
         } while (!(dateElement.getAttribute("value")).equals(date));
     }

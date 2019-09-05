@@ -30,7 +30,7 @@
         <version>3.0.0-M3</version>
         <configuration>
             <systemPropertyVariables>
-                <driver>ie</driver>
+                <driver>chrome</driver>
             </systemPropertyVariables>
         </configuration>
     </plugin>
