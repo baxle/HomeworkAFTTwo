@@ -14,7 +14,8 @@ public class RgsStart {
         this.driver = driver;
     }
 
-    @FindBy(xpath = "//ol[contains(@class,'rgs-menu')]/li/*[contains(text(),'Страхование')]")
+  //  @FindBy(xpath = "//ol[contains(@class,'rgs-menu')]/li/*[contains(text(),'Страхование')]")
+  @FindBy(xpath = " //li[@class='dropdown adv-analytics-navigation-line1-link current']/a[contains(.,'Меню')]")
     private WebElement insuranceButton;
 
     @FindBy(xpath = "//*[contains(text(),'ДМС')]")
