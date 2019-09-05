@@ -163,6 +163,7 @@ public class RgsRequest {
     }
 
     public void checkPhone(String phone) {
+        driver.manage().timeouts().implicitlyWait((long) 0.2, TimeUnit.SECONDS);
         assertEquals(phoneElement.getAttribute("value"), phone);
     }
 
@@ -172,7 +173,7 @@ public class RgsRequest {
     }
 
     public void checkErrorEmail(String errorMessage) {
-
+        driver.manage().timeouts().implicitlyWait((long) 0.2, TimeUnit.SECONDS);
         assertEquals("Введите адрес электронной почты",
                 driver.findElement(By.xpath("//span[@class='validation-error-text']")).getText());
         System.out.println(emailErrorMassageElement.getText().equals(errorMessage));
